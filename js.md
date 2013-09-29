@@ -12,7 +12,8 @@ For object iteration, use @key instead:
 	{{/each}} 
 
 #Backbone.js
-##Backbone.js 的最佳应用场景有哪些？
+## 概念
+### Backbone.js 的最佳应用场景有哪些？
 http://www.zhihu.com/question/19720745
 
 **新版的有道笔记 Web 版（http://note.youdao.com ） Backbone**。就像其他答案回答的，**Backbone 最适合的应用场景是单页面应用，并且页面上有大量数据模型，模型之间需要进行复杂的信息沟通。**Backbone 在这种场景下，能很好的实现模块间松耦合和事件驱动。 其他适用产品还有微博，网易微博的前端设计也是和 Backbone 类似的一个结构。
