@@ -54,9 +54,9 @@ SSH 选项是默认能用的,所以你根本不需要用 Raspi-config 在安装�
 智能型家居——能让你通过遥控器(通常是智能
 手机)来完全掌控屋里的设备,还能自动识别新加入的电器。
 对于这个项目,下面有一些不错的进阶读物:
- http://www.geekfan.net/3165/
- Introduction to Home Automation with Raspberry Pi and Fhem
- Home Genie
+	* http://www.geekfan.net/3165/
+	* [Introduction to Home Automation with Raspberry Pi and Fhem](http://binerry.de/post/30300770630/introduction-to-home-automation-with-raspberry-pi-and)
+	* [Home Genie](http://sourceforge.net/projects/homegenie/)
 
 * Web 服务器
 > 搭建一个网站是比较昂贵的,
@@ -65,7 +65,7 @@ SSH 选项是默认能用的,所以你根本不需要用 Raspi-config 在安装�
 到利用树莓派来承载你的在线资源。
 感谢 LAMP(Linux + Apache + MySQL + PHP)和 SSH,让这一切都成为了可能。你甚至可
 以运行一个数据库驱动的动态站点!
-http://www.geekfan.net/3066/告诉你如何将树莓派打造成自己的 Web 服务器,无论是
+http://www.geekfan.net/3066/ 告诉你如何将树莓派打造成自己的 Web 服务器,无论是
 个人使用还是用来分享互联网资源都可以。注意,如果想用作后者,那么你需要有一个静态
 的公网 IP 地址。
 
