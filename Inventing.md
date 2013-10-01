@@ -16,11 +16,11 @@ http://blog.shuoyangdesign.com/?p=755
 we need to see the behavior of the system.
 * 我们需要能够和系统交互的时候看到该行为的变化。
 we need to be able to interact with the system to see the behavior changes.
-* 我们需要能够多个对行为进行多个表现，从不同的角度观察。
+* 我们需要能够看到行为的多种表现形式，从不同的角度观察。
 we need to see multiple representations of the behavior, and see it from different perspective and different angles.
 * 我们需要能够直接和行为进行交互，衡量它，改变它，搜索它。
 we need to be able to interact with the behavior, measure it, transform it, search it.
-* 我们需要将不同的表现连接起来。
+* 我们需要能将不同的表现串起来。
 we need to be able to having multiple representation linked together.
 * 我们需要一种创建这种表现的方法
 we need a way of creating these representation. 
