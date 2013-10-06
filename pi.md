@@ -5,6 +5,7 @@
 ### 安装
 #### 使用dd写img
 在一台ubuntu上插入SD card
+
 * 注意要umount
 * 注意dd过程要5分钟，期间没有任何提示
 	df -h
