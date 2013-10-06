@@ -3,8 +3,16 @@
 
 ## 安装配置
 ### 安装
-
-
+#### 使用dd写img
+在一台ubuntu上插入SD card
+* 注意要umount
+* 注意dd过程要5分钟，期间没有任何提示
+	df -h
+    sudo umount /dev/mmcblk0p1
+    unzip 2013-09-25-wheezy-raspbian.zip
+	sudo dd bs=4M if=~/Downloads/2013-09-25-wheezy-raspbian.img of=/dev/mmcblk0
+img写好后显示SD卡是2G，需要手工把其它空间分区出来
+	
 ### 配置
 * 配置过程是由一个叫作 raspi-config 的工具来完成的,它会在你初次启动树莓派时自动显示。
 * 在你首次启动树莓派时,你要做的第一件事就是运行 Update。（Update是raspi-config的菜单中的一项）
