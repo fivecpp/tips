@@ -1,19 +1,63 @@
 ### GPIO 警告
 特别要注意的是,树莓派的额定电压为 3V,而不同于 Arduino 电脑的 5V。如果处理不当,很可能因 GPIO 引脚直接连接到树莓派上而导致树莓派被烧毁。所以,在连接到树莓派之前,一定要先通过仪器测量电压。
 
+## 问题
+SD卡的擦写次数是有限的，是否要将BT下载的文件保存到SD卡上？
+
+* 暂时先用SD卡保存BT下载文件，测试一下能用多久
+* 如何看已经擦写次数？
+
+树莓派使用swap文件做交换，是否要单独开一个swap分区？
+
 ## 安装配置
 ### 安装
+http://elinux.org/RPi_Easy_SD_Card_Setup
 #### 使用dd写img
 在一台ubuntu上插入SD card
 
-* 注意要umount
-* 注意dd过程要5分钟，期间没有任何提示
 	df -h
     sudo umount /dev/mmcblk0p1
     unzip 2013-09-25-wheezy-raspbian.zip
 	sudo dd bs=4M if=~/Downloads/2013-09-25-wheezy-raspbian.img of=/dev/mmcblk0
+
+* 注意dd前要umount
+* 注意dd过程要5分钟，期间没有任何提示
+
+#### 制作数据分区
 img写好后显示SD卡是2G，需要手工把其它空间分区出来
-	
+
+	sudo parted /dev/mmcblk0
+    (parted) p
+
+You should see something like this:
+
+    Model: SD SD16G (sd/mmc)
+	磁盘 /dev/mmcblk0: 16.0GB
+	Sector size (logical/physical): 512B/512B
+	分区表：msdos
+
+	数字  开始：  End     大小    类型     文件系统  标志
+ 	1    4194kB  62.9MB  58.7MB  primary  fat16     lba
+ 	2    62.9MB  2962MB  2899MB  primary  ext4
+
+继续
+
+	(parted) unit chs                                                         
+	(parted) p 
+
+You should see something like this:
+
+	Model: SD SD16G (sd/mmc)
+	磁盘 /dev/mmcblk0: 1946,101,10
+	Sector size (logical/physical): 512B/512B
+	BIOS 柱面、磁头、簇 的结构为：1946，255，63。每一个柱面是 8225kB。
+	分区表：msdos
+
+	数字  开始：    End        类型     文件系统  标志
+ 	1    0,130,2   7,165,29   primary  fat16     lba
+ 	2    7,165,30  360,34,57  primary  ext4
+
+
 ### 配置
 * 配置过程是由一个叫作 raspi-config 的工具来完成的,它会在你初次启动树莓派时自动显示。
 * 在你首次启动树莓派时,你要做的第一件事就是运行 Update。（Update是raspi-config的菜单中的一项）
