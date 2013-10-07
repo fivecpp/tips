@@ -78,6 +78,7 @@ carry on
 	(parted) q
     sudo fdisk -l
     sudo mkfs.ext4 /dev/mmcblk0p3
+    sudo e2label /dev/mmcblk0p3 rpi_data
     
 
 ### 配置
