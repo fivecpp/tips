@@ -79,7 +79,12 @@ carry on
     sudo fdisk -l
     sudo mkfs.ext4 /dev/mmcblk0p3
     sudo e2label /dev/mmcblk0p3 rpi_data
-    
+
+#### 连线
+* 插入SD卡，USB键盘和鼠标，显示器，网线
+* 电源线插入Pi
+* 插入插座
+
 
 ### 配置
 * 配置过程是由一个叫作 raspi-config 的工具来完成的,它会在你初次启动树莓派时自动显示。
