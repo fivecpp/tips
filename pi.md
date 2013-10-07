@@ -42,7 +42,7 @@ You should see something like this:
 
 继续
 
-	(parted) unit chs                                                         
+	(parted) unit MB                                                         
 	(parted) p 
 
 You should see something like this:
@@ -56,6 +56,23 @@ You should see something like this:
 	数字  开始：    End        类型     文件系统  标志
  	1    0,130,2   7,165,29   primary  fat16     lba
  	2    7,165,30  360,34,57  primary  ext4
+
+carry on
+
+	(parted) mkpart primary 2963 16010                                        
+	(parted) p  
+    
+You should see something like this:
+
+	Model: SD SD16G (sd/mmc)
+	磁盘 /dev/mmcblk0: 16010MB
+	Sector size (logical/physical): 512B/512B
+	分区表：msdos
+
+	数字  开始：  End      大小     类型     文件系统  标志
+ 	1    4.19MB  62.9MB   58.7MB   primary  fat16     lba
+ 	2    62.9MB  2962MB   2899MB   primary  ext4
+ 	3    2962MB  16010MB  13047MB  primary
 
 
 ### 配置
