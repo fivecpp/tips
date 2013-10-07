@@ -24,7 +24,7 @@ http://elinux.org/RPi_Easy_SD_Card_Setup
 * 注意dd过程要5分钟，期间没有任何提示
 
 #### 制作数据分区
-img写好后显示SD卡是2G，需要手工把其它空间分区出来
+如果SD卡容量大于2G，img写好后显示SD卡是2G，需要手工把其它空间分区出来。
 
 	sudo parted /dev/mmcblk0
     (parted) p
