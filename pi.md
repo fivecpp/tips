@@ -74,6 +74,11 @@ You should see something like this:
  	2    62.9MB  2962MB   2899MB   primary  ext4
  	3    2962MB  16010MB  13047MB  primary
 
+carry on
+	(parted) q
+    sudo fdisk -l
+    sudo mkfs.ext4 /dev/mmcblk0p3
+    
 
 ### 配置
 * 配置过程是由一个叫作 raspi-config 的工具来完成的,它会在你初次启动树莓派时自动显示。
