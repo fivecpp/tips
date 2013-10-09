@@ -17,6 +17,8 @@
 ### 绝对不要在树莓派上使用无源的HDMI→VGA视频转换器！
 http://shamiao.com/raspi/25
 
+http://elinux.org/RPi_VerifiedPeripherals#Display_adapters
+
 ## 现存问题
 SD卡的擦写次数是有限的，是否要将BT下载的文件保存到SD卡上？
 
