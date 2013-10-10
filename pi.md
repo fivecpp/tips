@@ -2,7 +2,6 @@
 使用的SoC是？(System on Chip，单片系统)
 >使用的是博通BCM2835。这个片上系统包含一块支持硬件浮点的ARM1176JZFS ARM CPU核心，其运行频率为700MHz，和一个Videocore 4显示核心(GPU)。GPU支持使用H.264解码器，进行蓝光质量的视频播放，数据速率为40MBit/s。同时还包含一个3D核心，可以使用 OpenGL ES2.0和OpenVG库开发3D应用。
 
-
 图形性能如何？
 >GPU支持OpenGL ES 2.0、硬件加速的OpenVG，和高至1080p30fps的H.264硬件解码。GPU的通常计算能力达到1Gpixel/s, 1.5Gtexel/s 或 24 GFLOPs，并且提供一系列材质渲染过滤与DMA功能。相比较来看，树莓派的图形性能基本上与初代Xbox等同。树莓派的总体性能也许和300MHz的奔腾2接近，不过图形能力是远远超越那个时代的。
 
