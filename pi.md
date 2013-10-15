@@ -30,8 +30,9 @@ http://elinux.org/RPi_VerifiedPeripherals#Display_adapters
 add to rastrack
 overclock
 SPI (Enable/Disable automatic loading of SPI kernel module (needed for e.g. PiFace))
-### 将swap文件从SD卡移到USB设备上 ***********************
-
+## 要立即解决的问题 ***********************************************
+### 将swap文件从SD卡移到USB设备上
+### vim
 ## 系统管理
 ### mount数据分区
 	pi@raspberrypi ~ $ sudo mount -t ext4 -o uid=pi,gid=pi /dev/mmcblk0p3 /home/pi/data
@@ -51,7 +52,7 @@ http://unix.stackexchange.com/questions/14671/mounting-an-ext3-fs-with-user-priv
 On an ext4 filesystem (like ext2, ext3, and most other unix-originating filesystems), the effective file permissions don't depend on who mounted the filesystem or on mount options, only on the metadata stored within the filesystem.
 
 ---
-ext4不能使用uid,gid,umask等选项。应该用chown和chmod修改其权限，在mount前或mount上之后做都可以。
+ext4不能使用uid,gid,umask等选项。应该用chown和chmod修改其权限，在mount前做或mount上之后做都可以。
 	sudo mount -t ext4 /dev/mmcblk0p3 /home/pi/data
     sudo chown -R pi:pi /home/pi/data
 
