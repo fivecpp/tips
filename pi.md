@@ -64,7 +64,11 @@ ext4不能使用uid,gid,umask等选项。应该用chown和chmod修改其权限�
 	sudo vi /etc/fstab
     增加一行 /dev/mmcblk0p3  /home/pi/data   ext4    defaults          0       0
     
-
+### 如果有多个flash或移动硬盘，使用UUID来mount更健壮
+找到UUID
+	ls -laF /dev/disk/by-uuid/
+/etc/fstab
+	UUID=dd0c5b81-7801-4a25-bf10-56f3ee41bd94  /home/pi/data   ext4    defaults          0       0
 ### CPU温度
 	$ vcgencmd measure_temp
 
