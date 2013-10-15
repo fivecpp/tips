@@ -32,7 +32,7 @@ overclock
 SPI (Enable/Disable automatic loading of SPI kernel module (needed for e.g. PiFace))
 
 ## 系统管理
-
+### mount数据分区
 	pi@raspberrypi ~ $ sudo mount -t ext4 -o uid=pi,gid=pi /dev/mmcblk0p3 /home/pi/data
     mount: wrong fs type, bad option, bad superblock on /dev/mmcblk0p3,
        missing codepage or helper program, or other error
@@ -44,7 +44,15 @@ SPI (Enable/Disable automatic loading of SPI kernel module (needed for e.g. PiFa
 
 uid=1000 options is supposed to use with ntfs or fat partition.
 ext4 have no such option.
-ext4不能使用uid,gid,umask等选项
+
+---
+http://unix.stackexchange.com/questions/14671/mounting-an-ext3-fs-with-user-privledges
+On an ext4 filesystem (like ext2, ext3, and most other unix-originating filesystems), the effective file permissions don't depend on who mounted the filesystem or on mount options, only on the metadata stored within the filesystem.
+
+---
+ext4不能使用uid,gid,umask等选项。应该在mount上之后，用chown和chmod修改其权限。
+	sudo mount -t ext4 /dev/mmcblk0p3 /home/pi/data
+    sudo chown -R pi:pi /home/pi/data
 
 ### CPU温度
 	$ vcgencmd measure_temp
