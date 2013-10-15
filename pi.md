@@ -103,11 +103,15 @@ carry on
 * 电源线一端插入Pi
 * 电源线另一端插入插座
 
-
 ### 配置
 * 配置过程是由一个叫作 raspi-config 的工具来完成的,它会在你初次启动树莓派时自动显示。
 * 在你首次启动树莓派时,你要做的第一件事就是运行 Update。（Update是raspi-config的菜单中的一项）
 * raspi-config 可以在任何时候打开,你只需要在命令行里输入 sudo raspi-config。
+
+### raspi-config未理解的配置项
+add to rastrack
+overclock
+SPI (Enable/Disable automatic loading of SPI kernel module (needed for e.g. PiFace))
 
 ### SSH
 SSH 选项是默认能用的,所以你根本不需要用 Raspi-config 在安装时对它进行任何设置。只要你的树莓派与你的电脑连接在同一网络,同时你又有类似于 PuTTY 这样的 SSH 工具，那么你就能够很快连接到自己的树莓派了。
