@@ -32,6 +32,20 @@ overclock
 SPI (Enable/Disable automatic loading of SPI kernel module (needed for e.g. PiFace))
 
 ## 系统管理
+
+	pi@raspberrypi ~ $ sudo mount -t ext4 -o uid=pi,gid=pi /dev/mmcblk0p3 /home/pi/data
+    mount: wrong fs type, bad option, bad superblock on /dev/mmcblk0p3,
+       missing codepage or helper program, or other error
+       In some cases useful info is found in syslog - try
+       dmesg | tail  or so
+
+	pi@raspberrypi ~ $ dmesg | tail
+	[14196.867921] EXT4-fs (mmcblk0p3): Unrecognized mount option "uid=1000" or missing value
+
+uid=1000 options is supposed to use with ntfs or fat partition.
+ext4 have no such option.
+ext4不能使用uid,gid,umask等选项
+
 ### CPU温度
 	$ vcgencmd measure_temp
 
