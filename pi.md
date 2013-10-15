@@ -30,9 +30,12 @@ http://elinux.org/RPi_VerifiedPeripherals#Display_adapters
 add to rastrack
 overclock
 SPI (Enable/Disable automatic loading of SPI kernel module (needed for e.g. PiFace))
+
 ## 要立即解决的问题 ***********************************************
 ### 将swap文件从SD卡移到USB设备上
 ### vim
+## **************************************************************
+
 ## 系统管理
 ### mount数据分区
 	pi@raspberrypi ~ $ sudo mount -t ext4 -o uid=pi,gid=pi /dev/mmcblk0p3 /home/pi/data
