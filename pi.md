@@ -26,6 +26,7 @@ http://elinux.org/RPi_VerifiedPeripherals#Display_adapters
 * 如何看已经擦写次数？
 
 ### 树莓派使用swap文件做交换，是否要单独开一个swap分区？
+
 ### raspi-config未理解的配置项
 add to rastrack
 overclock
@@ -37,7 +38,7 @@ SPI (Enable/Disable automatic loading of SPI kernel module (needed for e.g. PiFa
 ## **************************************************************
 
 ## 系统管理
-### mount数据分区
+### 命令行mount数据分区
 	pi@raspberrypi ~ $ sudo mount -t ext4 -o uid=pi,gid=pi /dev/mmcblk0p3 /home/pi/data
     mount: wrong fs type, bad option, bad superblock on /dev/mmcblk0p3,
        missing codepage or helper program, or other error
@@ -58,6 +59,11 @@ On an ext4 filesystem (like ext2, ext3, and most other unix-originating filesyst
 ext4不能使用uid,gid,umask等选项。应该用chown和chmod修改其权限，在mount前做或mount上之后做都可以。
 	sudo mount -t ext4 /dev/mmcblk0p3 /home/pi/data
     sudo chown -R pi:pi /home/pi/data
+
+### 启动时自动mount数据分区
+	sudo vi /etc/fstab
+    增加一行 /dev/mmcblk0p3  /home/pi/data   ext4    defaults          0       0
+    
 
 ### CPU温度
 	$ vcgencmd measure_temp
