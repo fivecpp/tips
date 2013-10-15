@@ -31,6 +31,23 @@ add to rastrack
 overclock
 SPI (Enable/Disable automatic loading of SPI kernel module (needed for e.g. PiFace))
 
+## 系统管理
+### CPU温度
+	$ vcgencmd measure_temp
+
+如果装盒，没散热片，用XBMC之类的系统的话。上70也不奇怪……
+如果没超频，raspbian系统，待机，盒子敞开，加散热片，室温20度的话，一般不会超过48度。
+
+---
+
+装盒 散热片 开盒 48度
+不装盒 无散热片 42度
+看来盒子很影响散热啊
+
+---
+
+使用raspbmc播放电影 55度
+
 ## 安装配置
 ### 安装
 http://elinux.org/RPi_Easy_SD_Card_Setup
