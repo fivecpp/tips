@@ -35,6 +35,9 @@ SPI (Enable/Disable automatic loading of SPI kernel module (needed for e.g. PiFa
 ## 要立即解决的问题 ***********************************************
 ### 将swap文件从SD卡移到USB设备上
 ### vim
+Backup your SD card
+samba/NFS play movie
+监控mem,cpu,network io,disk io,cpu温度
 ## **************************************************************
 
 ## 系统管理
