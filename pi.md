@@ -38,7 +38,8 @@ SPI (Enable/Disable automatic loading of SPI kernel module (needed for e.g. PiFa
 Backup your SD card
 samba/NFS play movie
 监控mem,cpu,network io,disk io,cpu温度
-hdmi显示器热插入
+hdmi显示器热插入无反应
+usb键盘鼠标插入导致重启
 ## **************************************************************
 
 ## 系统管理
