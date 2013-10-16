@@ -299,6 +299,14 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
 	/etc/init.d/transmission-daemon stop
 	/etc/init.d/transmission-daemon start
     
+### Samba
+
+	# apt-get install samba
+    
+需要装samba-common-bin，否则会出现testparm: command not found
+
+    # apt-get install samba-common-bin
+
 
 ### 在树莓派上安装 XBMC
 为了将树莓派打造成一台媒体中心,你需要安装 Raspbmc,这是树莓派可选安装的一种操作系统。
