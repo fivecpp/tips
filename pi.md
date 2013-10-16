@@ -271,6 +271,8 @@ SSH 选项是默认能用的,所以你根本不需要用 Raspi-config 在安装�
 下载目录的权限改为777
 rpc-whitelist导致webconsole无法访问，可以先关掉
 
+/etc/init.d/transmission-daemon stop
+/etc/init.d/transmission-daemon start
 ### 在树莓派上安装 XBMC
 为了将树莓派打造成一台媒体中心,你需要安装 Raspbmc,这是树莓派可选安装的一种操作系统。
 理想情况下你应该使用 2 张 SD 卡。其中一个给树莓派平时使用的操作系统用,另一个就用于 XBMC 系统。这样的话你只需要交换使用 SD 卡就可以完成不同角色的转变,非常简
