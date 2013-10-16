@@ -86,7 +86,8 @@ http://elinux.org/RPi_Adding_USB_Drives#Robust_mounting_of_multiple_USB_flash_dr
 将iface eth0 inet dhcp
 替换为
 
-	iface eth0 inet static
+	auto eth0  #**重要**
+    iface eth0 inet static
 	address 192.168.1.88
 	netmask 255.255.255.0
 	gateway 192.168.1.1
@@ -101,7 +102,8 @@ http://elinux.org/RPi_Adding_USB_Drives#Robust_mounting_of_multiple_USB_flash_dr
 	auto lo
 	iface lo inet loopback
 
-	iface eth0 inet static
+	auto eth0
+    iface eth0 inet static
 	address 192.168.1.88
 	netmask 255.255.255.0
 	gateway 192.168.1.1
@@ -111,12 +113,10 @@ http://elinux.org/RPi_Adding_USB_Drives#Robust_mounting_of_multiple_USB_flash_dr
 	wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
 
 ### 重启网络
+#### 问题：/etc/init.d/networking restart is deprecated
 如果 sudo /etc/init.d/networking restart
 或 sudo service networking restart
 结果提示/etc/init.d/networking restart is deprecated
-
-sudo /etc/init.d/networking stop
-sudo service networking start
 
 ---
 The part that is deprecated is using the init script to restart or force-reload, for example:
@@ -147,6 +147,9 @@ To reliably restart a network interface you can use the following:
 
 This will bring the interface down and, once the ifdown command has completed successfully, bring it back up again.
 
+---
+所以，要加上auto eth0，这样就能使用/etc/init.d/networking restart或service networking restart。
+如果没有auto eth0，要使用screen，先/etc/init.d/networking stop，再service networking start。
 
 ### CPU温度
 	$ vcgencmd measure_temp
