@@ -91,6 +91,8 @@ http://elinux.org/RPi_Adding_USB_Drives#Robust_mounting_of_multiple_USB_flash_dr
 
 然后删除这一行  iface default inet dhcp(否则 ip是固定的但是无法连外网)
 
+最后重启系统
+
 ---
 修改后的文件为
 
