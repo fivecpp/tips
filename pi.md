@@ -293,9 +293,11 @@ SSH 选项是默认能用的,所以你根本不需要用 Raspi-config 在安装�
     
 * 路由器上设置端口转发，进入端口TCP 51413,UDP 51413
 * 限制上传速率为30k/s
+* 重启
 
-/etc/init.d/transmission-daemon stop
-/etc/init.d/transmission-daemon start
+	/etc/init.d/transmission-daemon stop
+	/etc/init.d/transmission-daemon start
+    
 ### 在树莓派上安装 XBMC
 为了将树莓派打造成一台媒体中心,你需要安装 Raspbmc,这是树莓派可选安装的一种操作系统。
 理想情况下你应该使用 2 张 SD 卡。其中一个给树莓派平时使用的操作系统用,另一个就用于 XBMC 系统。这样的话你只需要交换使用 SD 卡就可以完成不同角色的转变,非常简
