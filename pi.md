@@ -281,6 +281,10 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
 	"rpc-port": "9091",
 	"rpc-username": "transmission",
 
+* rpc-whitelist导致webUI无法访问，可以先关掉
+
+	"rpc-whitelist-enabled": false,
+    
 * 下载目录位置
 
 	"download-dir": "/mnt/m/downloading/transmission/download",
@@ -288,12 +292,8 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
 	"incomplete-dir-enabled": true,
 
 * 下载目录的权限改为777
-* rpc-whitelist导致webconsole无法访问，可以先关掉
-
-	"rpc-whitelist-enabled": false,
-    
 * 路由器上设置端口转发，进入端口TCP 51413,UDP 51413
-* 限制上传速率为30k/s
+* 限制上传速率为30k/s ****************************************
 * 重启
 
 	/etc/init.d/transmission-daemon stop
