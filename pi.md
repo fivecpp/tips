@@ -83,16 +83,14 @@ http://elinux.org/RPi_Adding_USB_Drives#Robust_mounting_of_multiple_USB_flash_dr
 
 将iface eth0 inet dhcp
 替换为
-iface eth0 inet static
-
-address 192.168.1.88
-netmask 255.255.255.0
-gateway 192.168.1.1
+	iface eth0 inet static
+	address 192.168.1.88
+	netmask 255.255.255.0
+	gateway 192.168.1.1
 
 然后删除这一行  iface default inet dhcp(否则 ip是固定的但是无法连外网)
 
-
-
+---
 修改后的文件为
 
 	auto lo
