@@ -276,7 +276,7 @@ SSH 选项是默认能用的,所以你根本不需要用 Raspi-config 在安装�
 * webUI
 
 	>“rpc-enabled”: true,
-	“rpc-password”: “<your password>”,
+	>“rpc-password”: “<your password>”,
 	“rpc-port”: “<your chosen port>”,
 	“rpc-username”: “<your username>”,
 
