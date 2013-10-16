@@ -275,14 +275,14 @@ SSH 选项是默认能用的,所以你根本不需要用 Raspi-config 在安装�
 
 * webUI
 
-	“rpc-enabled”: true,
+	>“rpc-enabled”: true,
 	“rpc-password”: “<your password>”,
 	“rpc-port”: “<your chosen port>”,
 	“rpc-username”: “<your username>”,
 
 * 下载目录位置
 
-	"download-dir”: “/media/<your directory name>/<folder on drive>",
+	>"download-dir”: “/media/<your directory name>/<folder on drive>",
 	”incomplete-dir”: “/media/<your directory name>/<some other folder on drive>”,
 	”incomplete-dir-enabled”: true,
 
