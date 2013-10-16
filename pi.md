@@ -108,6 +108,13 @@ http://elinux.org/RPi_Adding_USB_Drives#Robust_mounting_of_multiple_USB_flash_dr
 	iface wlan0 inet manual
 	wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
 
+### 重启网络
+如果 sudo /etc/init.d/networking restart
+或 sudo service networking restart
+结果提示/etc/init.d/networking restart is deprecated
+
+sudo /etc/init.d/networking stop
+sudo service networking start
 
 ### CPU温度
 	$ vcgencmd measure_temp
