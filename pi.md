@@ -276,16 +276,16 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
 
 * webUI
 
-	“rpc-enabled”: true,
-	“rpc-password”: “your password”,
-	“rpc-port”: “9091”,
-	“rpc-username”: “transmission”,
+	"rpc-enabled": true,
+	"rpc-password": "your password",
+	"rpc-port": "9091",
+	"rpc-username": "transmission",
 
 * 下载目录位置
 
 	"download-dir": "/mnt/m/downloading/transmission/download",
-	”incomplete-dir”: "/mnt/m/downloading/transmission/incomplete",
-	”incomplete-dir-enabled”: true,
+	"incomplete-dir": "/mnt/m/downloading/transmission/incomplete",
+	"incomplete-dir-enabled": true,
 
 * 下载目录的权限改为777
 * rpc-whitelist导致webconsole无法访问，可以先关掉
