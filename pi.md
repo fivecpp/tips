@@ -268,6 +268,7 @@ SSH 选项是默认能用的,所以你根本不需要用 Raspi-config 在安装�
 
 ## 应用
 ### 下载机 transmission-daemon
+http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as-a-torrent-server/
 
 	$ sudo passwd root
     $ su - root
