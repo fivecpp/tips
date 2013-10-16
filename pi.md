@@ -149,6 +149,7 @@ This will bring the interface down and, once the ifdown command has completed su
 
 ---
 所以，要加上auto eth0，这样就能使用/etc/init.d/networking restart或service networking restart。
+
 如果没有auto eth0，要使用screen，先/etc/init.d/networking stop，再service networking start。
 
 ### CPU温度
