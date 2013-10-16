@@ -268,11 +268,12 @@ SSH 选项是默认能用的,所以你根本不需要用 Raspi-config 在安装�
 
 ## 应用
 ### 下载机 transmission-daemon
-下载目录的权限改为777
-rpc-whitelist导致webconsole无法访问，可以先关掉
+* 下载目录的权限改为777
+* rpc-whitelist导致webconsole无法访问，可以先关掉
 
 	"rpc-whitelist-enabled": false,
 
+* 限制上传速率为30k/s
 
 /etc/init.d/transmission-daemon stop
 /etc/init.d/transmission-daemon start
