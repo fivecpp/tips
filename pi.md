@@ -77,6 +77,37 @@ http://elinux.org/RPi_Adding_USB_Drives#Robust_mounting_of_multiple_USB_flash_dr
 /etc/fstab
 
 	UUID=dd0c5b81-7801-4a25-bf10-56f3ee41bd94  /home/pi/data   ext4    defaults          0       0
+
+### 将网络由DHCP改为固定IP
+/etc/network/interfaces
+
+将iface eth0 inet dhcp
+替换为
+iface eth0 inet static
+
+address 192.168.1.88
+netmask 255.255.255.0
+gateway 192.168.1.1
+
+然后删除这一行  iface default inet dhcp(否则 ip是固定的但是无法连外网)
+
+
+
+修改后的文件为
+
+	auto lo
+	iface lo inet loopback
+
+	iface eth0 inet static
+	address 192.168.1.88
+	netmask 255.255.255.0
+	gateway 192.168.1.1
+
+	allow-hotplug wlan0
+	iface wlan0 inet manual
+	wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
+
+
 ### CPU温度
 	$ vcgencmd measure_temp
 
