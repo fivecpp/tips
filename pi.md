@@ -83,6 +83,7 @@ http://elinux.org/RPi_Adding_USB_Drives#Robust_mounting_of_multiple_USB_flash_dr
 
 将iface eth0 inet dhcp
 替换为
+
 	iface eth0 inet static
 	address 192.168.1.88
 	netmask 255.255.255.0
