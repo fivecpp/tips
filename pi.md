@@ -277,9 +277,9 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
 * webUI
 
 	“rpc-enabled”: true,
-	“rpc-password”: “<your password>”,
-	“rpc-port”: “<your chosen port>”,
-	“rpc-username”: “<your username>”,
+	“rpc-password”: “your password”,
+	“rpc-port”: “9091”,
+	“rpc-username”: “transmission”,
 
 * 下载目录位置
 
