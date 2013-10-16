@@ -117,6 +117,36 @@ http://elinux.org/RPi_Adding_USB_Drives#Robust_mounting_of_multiple_USB_flash_dr
 sudo /etc/init.d/networking stop
 sudo service networking start
 
+---
+The part that is deprecated is using the init script to restart or force-reload, for example:
+
+with the following in your /etc/network/interfaces:
+
+	# The loopback network interface
+	auto lo
+	iface lo inet loopback
+
+	# The primary network interface
+	allow-hotplug eth0
+	iface eth0 inet dhcp
+
+running either /etc/init.d/networking restart or invoke-rc.d networking restart would run:
+
+	# ifdown -a
+	then 
+	# ifup -a
+
+The problem is that ifdown -a will bring down all network interfaces, whereas ifup -a will only bring up any network devices in /etc/network/interfaces that are set to auto, anything with allow-hotplug won't be bought back up until it detects a hotplug event, usually when a network cable is plugged in.
+
+In the example interfaces file above this means that the loopback device will come back up every time, but eth0 won't.
+
+To reliably restart a network interface you can use the following:
+
+	# ifdown eth0 && ifup eth0
+
+This will bring the interface down and, once the ifdown command has completed successfully, bring it back up again.
+
+
 ### CPU温度
 	$ vcgencmd measure_temp
 
