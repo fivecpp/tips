@@ -283,8 +283,8 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
 
 * 下载目录位置
 
-	"download-dir": "/media/<your directory name>/<folder on drive>",
-	”incomplete-dir”: “/media/<your directory name>/<some other folder on drive>”,
+	"download-dir": "/mnt/m/downloading/transmission/download",
+	”incomplete-dir”: "/mnt/m/downloading/transmission/incomplete",
 	”incomplete-dir-enabled”: true,
 
 * 下载目录的权限改为777
