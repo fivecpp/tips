@@ -307,6 +307,11 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
 
     # apt-get install samba-common-bin
 
+	# cd /etc/samba
+    # mv smb.conf smb.conf.master
+    # testparm -s smb.conf.master > smb.conf
+    
+    
 
 ### 在树莓派上安装 XBMC
 为了将树莓派打造成一台媒体中心,你需要安装 Raspbmc,这是树莓派可选安装的一种操作系统。
