@@ -114,8 +114,8 @@ http://elinux.org/RPi_Adding_USB_Drives#Robust_mounting_of_multiple_USB_flash_dr
 
 ### 重启网络
 #### 问题：/etc/init.d/networking restart is deprecated
-如果 sudo /etc/init.d/networking restart
-或 sudo service networking restart
+如果 sudo /etc/init.d/networking restart,或 sudo service networking restart
+
 结果提示/etc/init.d/networking restart is deprecated
 
 ---
