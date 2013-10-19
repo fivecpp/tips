@@ -307,7 +307,8 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
 * webUI程序所在目录是 /usr/share/transmission/web
 
 #### 其它
-* transmission-remote-cli(https://github.com/fagga/transmission-remote-cli/tree/master)是Python程序
+* transmission-remote-cli是Python程序
+https://github.com/fagga/transmission-remote-cli/tree/master
 
 ### Samba
 
