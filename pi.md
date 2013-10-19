@@ -308,7 +308,9 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
 
 #### 其它
 * transmission-remote-cli是Python程序
-	https://github.com/fagga/transmission-remote-cli/tree/master
+  https://github.com/fagga/transmission-remote-cli/tree/master
+* rpc-spec
+  https://trac.transmissionbt.com/browser/trunk/extras/rpc-spec.txt
 
 
 ### Samba
