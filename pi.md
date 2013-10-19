@@ -303,7 +303,7 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
 	/etc/init.d/transmission-daemon start
 
 #### webUI
-* http://ip:9091/
+* 访问 http://ip:9091/
 * webUI程序所在目录是 /usr/share/transmission/web
 
 ### Samba
