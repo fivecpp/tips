@@ -36,7 +36,7 @@ I've been using extensively deluge/rtorrent/transmission and my feedback is the 
 
 ### Which torrent client should i choose ?
 http://wiki.seedboxes.cc/index.php/Which_torrent_client_should_i_choose_%3F
-* Deluge不支持Rss feeds
+* Deluge不支持Rss feeds，需要增加flexget
 * 选Rtorrent (+rutorrent)
 
 ## 下载机 transmission-daemon
