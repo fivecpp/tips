@@ -42,7 +42,9 @@ hdmi显示器热插入无反应
 usb键盘鼠标插入导致重启
 
 ### 远程添加bt种子
-bittorrent sync
+* webUI上的upload按钮，上传本地种子文件
+* bittorrent sync，本地种子文件同步到pi上watch_dir
+* 点击浏览器中的magnet link，打开xdg-open，调用一个shell脚本（curl，post magnet link.）
 
 ### DLNA
 Flexget is very simple to use, their wiki is full of information.
