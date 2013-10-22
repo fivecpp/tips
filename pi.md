@@ -42,11 +42,17 @@ hdmi显示器热插入无反应
 usb键盘鼠标插入导致重启
 
 ### 远程添加bt种子
+跨互联网
+
 * webUI上的upload按钮，上传本地种子文件。
 * bittorrent sync，本地种子文件同步到pi上watch_dir。
-* 如果在局域网内，可以在pi上做一个samba共享目录，将种子文件拷贝到这个共享目录。
 * 点击浏览器中的magnet link，打开xdg-open，调用一个shell脚本（curl，post magnet link.）。使用curl打开magnet link是提交种子的好方法，麻烦的是需要在本地做magnet.desktop和mime配置。
 * pi上的rss downloader，e.g. flexget
+
+---
+局域网内
+
+* 如果在局域网内，可以在pi上做一个samba共享目录，将种子文件拷贝到这个共享目录。
 
 ### DLNA
 Flexget is very simple to use, their wiki is full of information.
