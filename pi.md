@@ -300,7 +300,7 @@ I tried qbittorrent as well, and I think I had trouble with setting up RSS in th
 ---
 There is an unfortunate lack of decent linux based torrent clients. (When I say decent, I mean built in RSS and Web interface; the sort of stuff you need for a torrent box). Odd when compared to the abundance of windows clients.
 
-utorrent server, despite being incredibly early alpha is one of the best out there. But sadly it doesn't work on ARM.
+Ironically, utorrent server, despite being incredibly early alpha is one of the best out there. But sadly it doesn't work on ARM.
 
 Vuze is java based and has a built in RSS (in plugin form), so in theory that could run if you install java run time; but it could be a little resource heavy.
 
@@ -354,6 +354,9 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
 #### webUI
 * 访问 http://ip:9091/
 * webUI程序所在目录是 /usr/share/transmission/web
+
+#### 自动下载(RSS tracker)
+Torrentwatch-x – Web based RSS tracker for bittorrents, integrates with transmission
 
 #### 其它
 * transmission-remote-cli是Python程序
