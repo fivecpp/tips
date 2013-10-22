@@ -291,6 +291,7 @@ SSH 选项是默认能用的,所以你根本不需要用 Raspi-config 在安装�
 ## 应用
 ### 下载机
 #### 选用哪种BT软件
+##### headless torrent program with RSS support
 Can anyone recommend a simple, headless torrent program with RSS support for the raspi? 
 
 Deluge doesn't seem to be able to run headlessly.
@@ -315,7 +316,7 @@ Very usefull for a torrent box, with MiniDLNA for streaming all the videos in th
 ---
 I use rtorrent and maintain it using Transdroid on my phone. It's a great combo.
 
-#### deluge/rtorrent/transmission
+##### deluge/rtorrent/transmission
 deluge is easier to work with, it has a simpler interface and its easier to use. whereas rtorrent on the other hand, offers more features and is geared towards more complex users, also lets not forget it utilizes less resources than deluge therefore offering a more snappier and responsive feel
 
 ---
