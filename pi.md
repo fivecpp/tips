@@ -357,6 +357,7 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
 
 #### 自动下载(RSS tracker)
 Torrentwatch-x – Web based RSS tracker for bittorrents, integrates with transmission
+flexget
 
 #### 其它
 * transmission-remote-cli是Python程序
