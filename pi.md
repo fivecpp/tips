@@ -36,6 +36,8 @@ I've been using extensively deluge/rtorrent/transmission and my feedback is the 
 
 ### Which torrent client should i choose ?
 http://wiki.seedboxes.cc/index.php/Which_torrent_client_should_i_choose_%3F
+* Deluge不支持Rss feeds
+* 选Rtorrent (+rutorrent)
 
 ## 下载机 transmission-daemon
 http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as-a-torrent-server/
