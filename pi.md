@@ -34,6 +34,9 @@ I've been using extensively deluge/rtorrent/transmission and my feedback is the 
 - Rtorrent, most powerful and light one, can handle 5K torrents without much trouble (Yes I tried !) but difficult to configurate. (However if available in the repo, easy to install)
 - Deluge torrent, my favorite, both easy to use/userfriendly and good performance (3K torrents but difficult higher xD). The web interface is nice and deluge is easy to install.
 
+### Which torrent client should i choose ?
+http://wiki.seedboxes.cc/index.php/Which_torrent_client_should_i_choose_%3F
+
 ## 下载机 transmission-daemon
 http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as-a-torrent-server/
 
