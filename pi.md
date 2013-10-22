@@ -41,6 +41,9 @@ samba/NFS play movie
 hdmi显示器热插入无反应
 usb键盘鼠标插入导致重启
 
+### 远程添加bt种子
+bittorrent sync
+
 ### DLNA
 Flexget is very simple to use, their wiki is full of information.
 http://flexget.com/wiki/Configuration
