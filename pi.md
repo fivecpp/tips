@@ -71,7 +71,7 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
     chmod 777 /mnt/m/downloading -R
     
 * 路由器上设置端口转发，进入端口TCP 51413,UDP 51413
-* 限制上传速率为30k/s ****************************************
+* 限制上传速率为30k/s
 * 重启
 
 	/etc/init.d/transmission-daemon stop
