@@ -1,3 +1,106 @@
+# 下载机
+## 选用哪种BT软件
+### headless torrent program with RSS support
+Can anyone recommend a simple, headless torrent program with RSS support for the raspi? 
+
+Deluge doesn't seem to be able to run headlessly.
+Transmission needs flexget for RSS and that seems quite complicated. 
+I tried qbittorrent as well, and I think I had trouble with setting up RSS in that, too, before I even tried getting it to run headlessly using "screen".
+
+---
+utorrent server, despite being incredibly early alpha is one of the best out there. But sadly it doesn't work on ARM.
+utorrent不支持ARM
+
+Vuze is java based and has a built in RSS (in plugin form), so in theory that could run if you install java run time; but it could be a little resource heavy.
+Vuze基于java，占用资源
+
+---
+Flexget is very simple to use, their wiki is full of information.
+http://flexget.com/wiki/Configuration
+
+I use flexget + deluge (only the web ui & the daemon), on my Archlinux server for my TV series addiction   .
+
+Very usefull for a torrent box, with MiniDLNA for streaming all the videos in the house
+
+---
+I use rtorrent and maintain it using Transdroid on my phone. It's a great combo.
+
+### deluge/rtorrent/transmission
+deluge is easier to work with, it has a simpler interface and its easier to use. whereas rtorrent on the other hand, offers more features and is geared towards more complex users, also lets not forget it utilizes less resources than deluge therefore offering a more snappier and responsive feel
+
+---
+I've been using extensively deluge/rtorrent/transmission and my feedback is the following
+- Transmission is well integrated in Ubuntu but perf are okay. Not my taste in fact.
+- Rtorrent, most powerful and light one, can handle 5K torrents without much trouble (Yes I tried !) but difficult to configurate. (However if available in the repo, easy to install)
+- Deluge torrent, my favorite, both easy to use/userfriendly and good performance (3K torrents but difficult higher xD). The web interface is nice and deluge is easy to install.
+
+## 下载机 transmission-daemon
+http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as-a-torrent-server/
+
+	$ sudo passwd root
+    $ su - root
+    # apt-get install transmission-daemon 
+
+* webUI
+
+	"rpc-enabled": true,
+	"rpc-password": "your password",
+	"rpc-port": "9091",
+	"rpc-username": "transmission",
+
+* rpc-whitelist导致webUI无法访问，可以先关掉
+
+	"rpc-whitelist-enabled": false,
+    
+* 下载目录位置
+
+	"download-dir": "/mnt/m/downloading/transmission/download",
+	"incomplete-dir": "/mnt/m/downloading/transmission/incomplete",
+	"incomplete-dir-enabled": true,
+
+* 下载目录的权限改为777
+	
+    chmod 777 /mnt/m/downloading -R
+    
+* 路由器上设置端口转发，进入端口TCP 51413,UDP 51413
+* 限制上传速率为30k/s ****************************************
+* 重启
+
+	/etc/init.d/transmission-daemon stop
+	/etc/init.d/transmission-daemon start
+
+### webUI
+* 访问 http://ip:9091/
+* webUI程序所在目录是 /usr/share/transmission/web
+
+### 自动下载(RSS tracker)
+Torrentwatch-x – Web based RSS tracker for bittorrents, integrates with transmission
+flexget
+
+### 其它
+* transmission-remote-cli是Python程序
+  https://github.com/fagga/transmission-remote-cli/tree/master
+* rpc-spec
+  https://trac.transmissionbt.com/browser/trunk/extras/rpc-spec.txt
+
+
+## Samba
+
+	# apt-get install samba
+    
+需要装samba-common-bin，否则会出现testparm: command not found
+
+    # apt-get install samba-common-bin
+
+	# cd /etc/samba
+    # mv smb.conf smb.conf.master
+    # testparm -s smb.conf.master > smb.conf
+    
+## Mldonkey
+### WARNING: Directory /var/lib/mldonkey is full, MLDonkey shuts down
+
+---
+# 树莓派
 ## 概况
 使用的SoC是？(System on Chip，单片系统)
 >使用的是博通BCM2835。这个片上系统包含一块支持硬件浮点的ARM1176JZFS ARM CPU核心，其运行频率为700MHz，和一个Videocore 4显示核心(GPU)。GPU支持使用H.264解码器，进行蓝光质量的视频播放，数据速率为40MBit/s。同时还包含一个3D核心，可以使用 OpenGL ES2.0和OpenVG库开发3D应用。
@@ -289,106 +392,6 @@ SSH 选项是默认能用的,所以你根本不需要用 Raspi-config 在安装�
 * 树莓派上提供的主要的编程语言是 Python。
 
 ## 应用
-### 下载机
-#### 选用哪种BT软件
-##### headless torrent program with RSS support
-Can anyone recommend a simple, headless torrent program with RSS support for the raspi? 
-
-Deluge doesn't seem to be able to run headlessly.
-Transmission needs flexget for RSS and that seems quite complicated. 
-I tried qbittorrent as well, and I think I had trouble with setting up RSS in that, too, before I even tried getting it to run headlessly using "screen".
-
----
-utorrent server, despite being incredibly early alpha is one of the best out there. But sadly it doesn't work on ARM.
-utorrent不支持ARM
-
-Vuze is java based and has a built in RSS (in plugin form), so in theory that could run if you install java run time; but it could be a little resource heavy.
-Vuze基于java，占用资源
-
----
-Flexget is very simple to use, their wiki is full of information.
-http://flexget.com/wiki/Configuration
-
-I use flexget + deluge (only the web ui & the daemon), on my Archlinux server for my TV series addiction   .
-
-Very usefull for a torrent box, with MiniDLNA for streaming all the videos in the house
-
----
-I use rtorrent and maintain it using Transdroid on my phone. It's a great combo.
-
-##### deluge/rtorrent/transmission
-deluge is easier to work with, it has a simpler interface and its easier to use. whereas rtorrent on the other hand, offers more features and is geared towards more complex users, also lets not forget it utilizes less resources than deluge therefore offering a more snappier and responsive feel
-
----
-I've been using extensively deluge/rtorrent/transmission and my feedback is the following
-- Transmission is well integrated in Ubuntu but perf are okay. Not my taste in fact.
-- Rtorrent, most powerful and light one, can handle 5K torrents without much trouble (Yes I tried !) but difficult to configurate. (However if available in the repo, easy to install)
-- Deluge torrent, my favorite, both easy to use/userfriendly and good performance (3K torrents but difficult higher xD). The web interface is nice and deluge is easy to install.
-
-### 下载机 transmission-daemon
-http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as-a-torrent-server/
-
-	$ sudo passwd root
-    $ su - root
-    # apt-get install transmission-daemon 
-
-* webUI
-
-	"rpc-enabled": true,
-	"rpc-password": "your password",
-	"rpc-port": "9091",
-	"rpc-username": "transmission",
-
-* rpc-whitelist导致webUI无法访问，可以先关掉
-
-	"rpc-whitelist-enabled": false,
-    
-* 下载目录位置
-
-	"download-dir": "/mnt/m/downloading/transmission/download",
-	"incomplete-dir": "/mnt/m/downloading/transmission/incomplete",
-	"incomplete-dir-enabled": true,
-
-* 下载目录的权限改为777
-	
-    chmod 777 /mnt/m/downloading -R
-    
-* 路由器上设置端口转发，进入端口TCP 51413,UDP 51413
-* 限制上传速率为30k/s ****************************************
-* 重启
-
-	/etc/init.d/transmission-daemon stop
-	/etc/init.d/transmission-daemon start
-
-#### webUI
-* 访问 http://ip:9091/
-* webUI程序所在目录是 /usr/share/transmission/web
-
-#### 自动下载(RSS tracker)
-Torrentwatch-x – Web based RSS tracker for bittorrents, integrates with transmission
-flexget
-
-#### 其它
-* transmission-remote-cli是Python程序
-  https://github.com/fagga/transmission-remote-cli/tree/master
-* rpc-spec
-  https://trac.transmissionbt.com/browser/trunk/extras/rpc-spec.txt
-
-
-### Samba
-
-	# apt-get install samba
-    
-需要装samba-common-bin，否则会出现testparm: command not found
-
-    # apt-get install samba-common-bin
-
-	# cd /etc/samba
-    # mv smb.conf smb.conf.master
-    # testparm -s smb.conf.master > smb.conf
-    
-### Mldonkey
-#### WARNING: Directory /var/lib/mldonkey is full, MLDonkey shuts down
 
 ### 在树莓派上安装 XBMC
 为了将树莓派打造成一台媒体中心,你需要安装 Raspbmc,这是树莓派可选安装的一种操作系统。
