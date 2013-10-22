@@ -41,7 +41,7 @@ samba/NFS play movie
 hdmi显示器热插入无反应
 usb键盘鼠标插入导致重启
 
-### 远程添加bt种子
+### 远程添加bt种子的方案
 跨互联网
 
 * webUI上的upload按钮，上传本地种子文件。
