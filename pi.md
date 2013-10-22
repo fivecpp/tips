@@ -76,6 +76,7 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
 
 	/etc/init.d/transmission-daemon stop
 	/etc/init.d/transmission-daemon start
+    
 * 种子所在目录 /var/lib/transmission-daemon/info/torrents
 
 ### webUI
