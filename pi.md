@@ -298,12 +298,11 @@ Transmission needs flexget for RSS and that seems quite complicated.
 I tried qbittorrent as well, and I think I had trouble with setting up RSS in that, too, before I even tried getting it to run headlessly using "screen".
 
 ---
-There is an unfortunate lack of decent linux based torrent clients. (When I say decent, I mean built in RSS and Web interface; the sort of stuff you need for a torrent box). Odd when compared to the abundance of windows clients.
-
-Ironically, utorrent server, despite being incredibly early alpha is one of the best out there. But sadly it doesn't work on ARM.
+utorrent server, despite being incredibly early alpha is one of the best out there. But sadly it doesn't work on ARM.
 utorrent不支持ARM
 
 Vuze is java based and has a built in RSS (in plugin form), so in theory that could run if you install java run time; but it could be a little resource heavy.
+Vuze基于java，占用资源
 
 ---
 Flexget is very simple to use, their wiki is full of information.
