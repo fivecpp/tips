@@ -290,7 +290,7 @@ SSH 选项是默认能用的,所以你根本不需要用 Raspi-config 在安装�
 
 ## 应用
 ### 下载机
-#### BT方案
+#### 选用哪种BT软件
 Can anyone recommend a simple, headless torrent program with RSS support for the raspi? 
 
 Deluge doesn't seem to be able to run headlessly.
