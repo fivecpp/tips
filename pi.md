@@ -1,5 +1,5 @@
 # 下载机
-## 选用哪种BT软件( 结论：选Rtorrent(+rutorrent) )
+## 选用哪种BT软件 ( 结论：选Rtorrent(+rutorrent) )
 ### headless torrent program with RSS support
 Can anyone recommend a simple, headless torrent program with RSS support for the raspi? 
 
@@ -9,21 +9,23 @@ I tried qbittorrent as well, and I think I had trouble with setting up RSS in th
 
 ---
 utorrent server, despite being incredibly early alpha is one of the best out there. But sadly it doesn't work on ARM.
-utorrent不支持ARM
+>utorrent不支持ARM
 
 Vuze is java based and has a built in RSS (in plugin form), so in theory that could run if you install java run time; but it could be a little resource heavy.
-Vuze基于java，占用资源
+>Vuze基于java，占用资源
 
 ---
 Flexget is very simple to use, their wiki is full of information.
 http://flexget.com/wiki/Configuration
 
 I use flexget + deluge (only the web ui & the daemon), on my Archlinux server for my TV series addiction   .
+>flexget + deluge
 
 Very usefull for a torrent box, with MiniDLNA for streaming all the videos in the house
 
 ---
 I use rtorrent and maintain it using Transdroid on my phone. It's a great combo.
+>rtorrent + Transdroid
 
 ### deluge/rtorrent/transmission
 deluge is easier to work with, it has a simpler interface and its easier to use. whereas rtorrent on the other hand, offers more features and is geared towards more complex users, also lets not forget it utilizes less resources than deluge therefore offering a more snappier and responsive feel
