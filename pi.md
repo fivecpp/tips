@@ -315,6 +315,14 @@ Very usefull for a torrent box, with MiniDLNA for streaming all the videos in th
 ---
 I use rtorrent and maintain it using Transdroid on my phone. It's a great combo.
 
+#### deluge/rtorrent/transmission
+deluge is easier to work with, it has a simpler interface and its easier to use. whereas rtorrent on the other hand, offers more features and is geared towards more complex users, also lets not forget it utilizes less resources than deluge therefore offering a more snappier and responsive feel
+
+---
+I've been using extensively deluge/rtorrent/transmission and my feedback is the following
+- Transmission is well integrated in Ubuntu but perf are okay. Not my taste in fact.
+- Rtorrent, most powerful and light one, can handle 5K torrents without much trouble (Yes I tried !) but difficult to configurate. (However if available in the repo, easy to install)
+- Deluge torrent, my favorite, both easy to use/userfriendly and good performance (3K torrents but difficult higher xD). The web interface is nice and deluge is easy to install.
 
 ### 下载机 transmission-daemon
 http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as-a-torrent-server/
