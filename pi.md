@@ -40,6 +40,7 @@ samba/NFS play movie
 监控mem,cpu,network io,disk io,cpu温度
 hdmi显示器热插入无反应
 usb键盘鼠标插入导致重启
+
 ### DLNA
 Flexget is very simple to use, their wiki is full of information.
 http://flexget.com/wiki/Configuration
@@ -275,6 +276,7 @@ SSH 选项是默认能用的,所以你根本不需要用 Raspi-config 在安装�
 
 ## 应用
 ### 下载机
+#### BT方案
 Can anyone recommend a simple, headless torrent program with RSS support for the raspi? 
 
 Deluge doesn't seem to be able to run headlessly.
@@ -295,6 +297,10 @@ http://flexget.com/wiki/Configuration
 I use flexget + deluge (only the web ui & the daemon), on my Archlinux server for my TV series addiction   .
 
 Very usefull for a torrent box, with MiniDLNA for streaming all the videos in the house
+
+---
+I use rtorrent and maintain it using Transdroid on my phone. It's a great combo.
+
 
 ### 下载机 transmission-daemon
 http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as-a-torrent-server/
