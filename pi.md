@@ -1,5 +1,5 @@
 # 下载机
-## 选用哪种BT软件
+## 选用哪种BT软件( 结论：选Rtorrent(+rutorrent) )
 ### headless torrent program with RSS support
 Can anyone recommend a simple, headless torrent program with RSS support for the raspi? 
 
