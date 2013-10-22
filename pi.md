@@ -45,7 +45,7 @@ usb键盘鼠标插入导致重启
 * webUI上的upload按钮，上传本地种子文件。
 * bittorrent sync，本地种子文件同步到pi上watch_dir。
 * 点击浏览器中的magnet link，打开xdg-open，调用一个shell脚本（curl，post magnet link.）。使用curl打开magnet link是提交种子的好方法，麻烦的是需要在本地做magnet.desktop和mime配置。
-* rss downloader: flexget
+* pi上的rss downloader，e.g. flexget
 
 ### DLNA
 Flexget is very simple to use, their wiki is full of information.
