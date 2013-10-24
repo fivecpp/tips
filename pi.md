@@ -106,6 +106,13 @@ http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as
     # mv smb.conf smb.conf.master
     # testparm -s smb.conf.master > smb.conf
     
+测试连接
+
+	smbclient //192.168.1.51/share -U share
+
+
+sudo smbmount //192.168.1.51/share /mnt/m -o username=share,password=PASS,iocharset=utf8
+
 ## Mldonkey
 ### WARNING: Directory /var/lib/mldonkey is full, MLDonkey shuts down
 
