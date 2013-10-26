@@ -301,14 +301,21 @@ This will bring the interface down and, once the ifdown command has completed su
 如果没超频，raspbian系统，待机，盒子敞开，加散热片，室温20度的话，一般不会超过48度。
 
 ---
-
 装盒 散热片 开盒 48度
 不装盒 无散热片 42度
 看来盒子很影响散热啊
 
 ---
-
 使用raspbmc播放电影 55度
+
+### 换国内镜像
+	sudo cp /etc/apt/source.list /etc/apt/source.list.backup
+	sudo vi /etc/apt/source.list
+
+	# deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
+	deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ wheezy main non-free contrib
+	deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ wheezy main non-free contrib
+
 
 ## 安装配置
 ### 安装
