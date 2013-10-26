@@ -57,17 +57,21 @@ rutorrent下载页面 https://bintray.com/novik65/generic/ruTorrent
     tar -xvf rutorrent-3.6.tar.gz
     cd rutorrent
     
-    ---
-    vi /etc/apache2/apache2.conf
-	增加
-    	ProxyPass /RPC2 scgi://localhost:5000/
+vi /etc/apache2/apache2.conf 增加
+
+	ProxyPass /RPC2 scgi://localhost:5000/
     
-    ---
-    vi /var/www/rutorrent/conf/config.php
-    	$scgi_port = 5000;
-		$scgi_host = “127.0.0.1″;
+edit /var/www/rutorrent/conf/config.php
+
+	$scgi_port = 5000;
+	$scgi_host = “127.0.0.1″;
     
-    
+In order to let rutorrent communicate with rtorrent we have to enable 2 Apache modules.
+
+	a2enmod proxy_scgi
+	a2enmod scgi
+
+
     wget http://dl.bintray.com/novik65/generic/plugins-3.6.tar.gz
     
     
