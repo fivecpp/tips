@@ -72,12 +72,20 @@ In order to let rutorrent communicate with rtorrent we have to enable 2 Apache m
 	a2enmod scgi
     service apache2 restart
 
+准备下载目录
+	cd /mnt/m/downloading
+    mkdir rtorrent
+    mkdir rtorrent/worker
+    mkdir rtorrent/session
+    mkdir rtorrent/watch
+    chown -R rtorrent:rtorrent rtorrent
+
 使用rtorrent用户来启动rtorrent
 
 	su - rtorrent
     vi .rtorrent.rc
-.rtorrent.rc内容
 
+.rtorrent.rc内容
 ```
 # rTorrent configuration file
 directory = /home/rtorrent/worker
