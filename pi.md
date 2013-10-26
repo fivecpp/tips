@@ -315,8 +315,8 @@ This will bring the interface down and, once the ifdown command has completed su
 	sudo vi /etc/apt/source.list
 
 	# deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
-	deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ wheezy main non-free contrib
-	deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ wheezy main non-free contrib
+	deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ wheezy main non-free contrib rpi
+	deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ wheezy main non-free contrib rpi
 
 
 ## 安装配置
