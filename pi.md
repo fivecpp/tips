@@ -73,6 +73,7 @@ In order to let rutorrent communicate with rtorrent we have to enable 2 Apache m
     service apache2 restart
 
 准备下载目录
+
 	cd /mnt/m/downloading
     mkdir rtorrent
     mkdir rtorrent/worker
