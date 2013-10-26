@@ -49,6 +49,17 @@ http://wiki.seedboxes.cc/index.php/Which_torrent_client_should_i_choose_%3F
     
     sudo apt-get install apache2 libapache2-mod-scgi php5  libapache2-mod-php5 php5-cli php5-common php5-cgi
     
+rutorrent下载页面 https://bintray.com/novik65/generic/ruTorrent
+
+    su   # su as root
+    cd /var/www
+    wget http://dl.bintray.com/novik65/generic/rutorrent-3.6.tar.gz
+    tar -xvf rutorrent-3.6.tar.gz
+    
+    
+    
+    wget http://dl.bintray.com/novik65/generic/plugins-3.6.tar.gz
+    
     
 
 ## 下载机 transmission-daemon
