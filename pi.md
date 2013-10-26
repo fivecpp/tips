@@ -88,7 +88,7 @@ In order to let rutorrent communicate with rtorrent we have to enable 2 Apache m
 .rtorrent.rc内容
 ```
 # rTorrent configuration file
-directory = /home/rtorrent/worker
+directory = /mnt/m/downloading/worker
 session = /home/rtorrent/session
 
 # Private trackers only please
