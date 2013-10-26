@@ -42,6 +42,15 @@ http://wiki.seedboxes.cc/index.php/Which_torrent_client_should_i_choose_%3F
 * Deluge不支持Rss feeds，需要增加flexget
 * 选Rtorrent (+rutorrent)
 
+## rtorrent (+rutorrent)
+
+	sudo apt-get install rtorrent screen
+    sudo adduser rtorrent
+    
+    sudo apt-get install apache2 libapache2-mod-scgi php5  libapache2-mod-php5 php5-cli php5-common php5-cgi
+    
+    
+
 ## 下载机 transmission-daemon
 http://cumulativeparadigms.wordpress.com/2012/08/13/tutorial-1-setting-up-rpi-as-a-torrent-server/
 
