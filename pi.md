@@ -70,7 +70,49 @@ In order to let rutorrent communicate with rtorrent we have to enable 2 Apache m
 
 	a2enmod proxy_scgi
 	a2enmod scgi
+    service apache2 restart
 
+使用rtorrent用户来启动rtorrent
+
+	su - rtorrent
+    vi .rtorrent.rc
+.rtorrent.rc内容
+
+```
+# rTorrent configuration file
+directory = /home/rtorrent/worker
+session = /home/rtorrent/session
+
+# Private trackers only please
+peer_exchange = yes
+tracker_numwant = -1
+use_udp_trackers = yes
+port_range = 50000-60000
+# Increasing these values does not normally increase speed but can negatively impact the server — please be careful
+min_peers = 2
+max_peers = 30
+min_peers_seed = 2
+max_peers_seed = 60
+
+# Hash checking is not meant to be done as fast as possible as this consumes a
+# large portion of the CPU and disk IO — you’re on a shared server.
+#  check_hash
+#   Yes – hash check after torrent has downloaded to verify contents of disk.
+#   No  – avoid the hard disk hash check after competition.
+#   Note: hash checking is done in RAM as data is received, rtorrent will
+#         ignore this value if it feels it’s necessary (e.g. meta-data wiped).
+#         This value could be seen as a bit silly because rtorrent will happily
+#         send bad data before the torrent is complete but you are more likely
+#         to have much worse problems if this check failed (e.g. server death).
+#   Author’s note: there is little documentation on what this exactly does and
+#                  has been pieced together through reading and experience.
+check_hash = no
+
+# Do not change: must modify Apache to be effective
+scgi_port = 127.0.0.1:5000
+```
+
+### rutorrent plugins
 
     wget http://dl.bintray.com/novik65/generic/plugins-3.6.tar.gz
     
