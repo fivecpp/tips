@@ -110,6 +110,7 @@ check_hash = no
 
 # Do not change: must modify Apache to be effective
 scgi_port = 127.0.0.1:5000
+
 ```
 
 ### rutorrent plugins
