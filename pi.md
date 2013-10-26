@@ -318,6 +318,11 @@ This will bring the interface down and, once the ifdown command has completed su
 	deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ wheezy main non-free contrib rpi
 	deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ wheezy main non-free contrib rpi
 
+### 查看使用的DNS
+安装dig和nslookup
+
+	sudo apt-get install dnsutils
+
 
 ## 安装配置
 ### 安装
