@@ -55,10 +55,17 @@ rutorrent下载页面 https://bintray.com/novik65/generic/ruTorrent
     cd /var/www
     wget http://dl.bintray.com/novik65/generic/rutorrent-3.6.tar.gz
     tar -xvf rutorrent-3.6.tar.gz
+    cd rutorrent
     
+    ---
     vi /etc/apache2/apache2.conf
-	增加 ProxyPass /RPC2 scgi://localhost:5000/
+	增加
+    	ProxyPass /RPC2 scgi://localhost:5000/
     
+    ---
+    vi /var/www/rutorrent/conf/config.php
+    	$scgi_port = 5000;
+		$scgi_host = “127.0.0.1″;
     
     
     wget http://dl.bintray.com/novik65/generic/plugins-3.6.tar.gz
