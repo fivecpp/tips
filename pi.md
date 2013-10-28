@@ -43,7 +43,7 @@ http://wiki.seedboxes.cc/index.php/Which_torrent_client_should_i_choose_%3F
 * 选Rtorrent (+rutorrent)
 
 ## rtorrent (+rutorrent)
-
+### 安装
 	sudo apt-get install rtorrent screen
     sudo adduser rtorrent
     
@@ -121,6 +121,15 @@ check_hash = no
 scgi_port = 127.0.0.1:5000
 
 ```
+
+### 运行
+使用rtorrent用户来运行rtorrent
+使用screen来运行rtorrent
+
+screen rtorrent
+screen -r
+
+rtorrent退出快捷键是Ctrl+q
 
 ### rutorrent plugins
 
