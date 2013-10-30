@@ -1,3 +1,21 @@
+## 要立即解决的问题 ***********************************************
+### 将swap文件从SD卡移到USB设备上
+### vim
+Backup your SD card
+监控mem,cpu,network io,disk io,cpu温度
+hdmi显示器热插入无反应
+usb键盘鼠标插入导致重启
+
+
+### DLNA
+Flexget is very simple to use, their wiki is full of information.
+http://flexget.com/wiki/Configuration
+
+I use flexget + deluge (only the web ui & the daemon), on my Archlinux server for my TV series addiction   .
+
+Very usefull for a torrent box, with MiniDLNA for streaming all the videos in the house
+## **************************************************************
+
 # 下载机
 ## 选用哪种BT软件 ( 结论：选Rtorrent(+rutorrent) )
 ### headless torrent program with RSS support
@@ -249,24 +267,6 @@ http://elinux.org/RPi_VerifiedPeripherals#Display_adapters
 add to rastrack
 overclock
 SPI (Enable/Disable automatic loading of SPI kernel module (needed for e.g. PiFace))
-
-## 要立即解决的问题 ***********************************************
-### 将swap文件从SD卡移到USB设备上
-### vim
-Backup your SD card
-监控mem,cpu,network io,disk io,cpu温度
-hdmi显示器热插入无反应
-usb键盘鼠标插入导致重启
-
-
-### DLNA
-Flexget is very simple to use, their wiki is full of information.
-http://flexget.com/wiki/Configuration
-
-I use flexget + deluge (only the web ui & the daemon), on my Archlinux server for my TV series addiction   .
-
-Very usefull for a torrent box, with MiniDLNA for streaming all the videos in the house
-## **************************************************************
 
 ## 系统管理
 ### 命令行mount数据分区
