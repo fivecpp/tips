@@ -259,25 +259,6 @@ samba/NFS play movie
 hdmi显示器热插入无反应
 usb键盘鼠标插入导致重启
 
-### 远程添加bt种子的方案
-跨互联网
-
-种子下载到本地
-* webUI上的upload按钮，上传本地种子文件。
-* bittorrent sync，本地种子文件同步到pi上watch_dir。(bittorrent sync是利用P2P技术的类似于Dropbox的私人云文件同步服务)
-* chrome extension监控本地目录，发现种子自动上传。chrome extension可以在页面上“种子下载”旁加一个“种子上传”的链接，此时和网站个体相关。
-
-magnet link/磁力链接
-* 点击浏览器中的magnet link，打开xdg-open，调用一个shell脚本（curl，post magnet link.）。使用curl打开magnet link是提交种子的好方法，麻烦的是需要在本地做magnet.desktop和mime配置。
-* 点击浏览器中的magnet link，通过chrome extension来向pi提交magnet link ?????
-
-pi上发起
-* pi上的rss downloader，e.g. flexget ？？？？
-
----
-局域网内
-
-* 如果在局域网内，可以在pi上做一个samba共享目录，将种子文件拷贝到这个共享目录。
 
 ### DLNA
 Flexget is very simple to use, their wiki is full of information.
