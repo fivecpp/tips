@@ -1,4 +1,4 @@
-## 要立即解决的问题 ***********************************************
+#------------------ 要立即解决的问题 ---------------------------------
 ### 将swap文件从SD卡移到USB设备上
 ### vim
 Backup your SD card
@@ -6,15 +6,13 @@ Backup your SD card
 hdmi显示器热插入无反应
 usb键盘鼠标插入导致重启
 
-
 ### DLNA
 Flexget is very simple to use, their wiki is full of information.
 http://flexget.com/wiki/Configuration
-
 I use flexget + deluge (only the web ui & the daemon), on my Archlinux server for my TV series addiction   .
-
 Very usefull for a torrent box, with MiniDLNA for streaming all the videos in the house
-## **************************************************************
+
+#---------------------------------------------------
 
 # 下载机
 ## 选用哪种BT软件 ( 结论：选Rtorrent(+rutorrent) )
