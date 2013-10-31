@@ -50,6 +50,11 @@ rTorrent 是一个非常简洁、优秀、非常轻量的BT客户端. 它使用
 
 aria2 是 Linux 下一个不错的高速下载工具。由于它具有**分段下载**引擎，所以支持从多个地址或者从一个地址的多个连接来下载同一个文件。这样自然就大大加快了文件的下载速 度。aria2 也具有**断点续传**功能，这使你随时能够恢复已经中断的文件下载。除了支持一般的 http(s) 和 ftp 协议外，aria2 还支持 BitTorrent 协议。这意味着，你也可以使用 aria2 来下载 torrent 文件。
 
+---
+很多朋友轉換到Linux下的時候，再下載大型檔案時，往往會遭遇到網路速度緩慢，想要使用在Windows上面像是flashget這類的多線程軟體，來加速下載。這裡推薦一個好用的小軟體 – aria2c，不但能夠多線程下載檔案，也能夠拿來下載bittorrent的檔案(有支援DHT)，不過下載bittorrent還是建議使用rtorrent比較威猛剛強一點
+
+看来aria2是拿来做HTTP下载的，断点续传和分段下载都是HTTP下载的特性。
+
 ### deluge/rtorrent/transmission
 deluge is easier to work with, it has a simpler interface and its easier to use. whereas rtorrent on the other hand, offers more features and is geared towards more complex users, also lets not forget it utilizes less resources than deluge therefore offering a more snappier and responsive feel
 
