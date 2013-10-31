@@ -6,6 +6,8 @@ Backup your SD card
 hdmi显示器热插入无反应
 usb键盘鼠标插入导致重启
 
+>有源 USB Hub，推荐使用有隔离的，即不能向树莓派反向供电的
+
 ### DLNA
 Flexget is very simple to use, their wiki is full of information.
 http://flexget.com/wiki/Configuration
