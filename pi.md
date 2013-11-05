@@ -244,6 +244,13 @@ sudo smbmount //192.168.1.51/share /mnt/m -o username=share,password=PASS,iochar
 ## Mldonkey
 ### WARNING: Directory /var/lib/mldonkey is full, MLDonkey shuts down
 
+1.SECURITY WARNING: user admin has an empty password, use command: useradd admin password
+解决方法:
+未设置MLDonkey 账户admin的密码，在Web页面的命令栏输入 useradd admin ××××××　然后input就可以了。
+2.在浏览器输入： http://localhost:4080 ，或对应 ip:4080 出现访问403 Forbidden的错误
+解决方法:
+说明mldonkey运行起来了，但是不允许远程登录，停止mlnet。然后进入/.mldonkey，用vi打开downloads.ini找到allow_ip那部分添加自己的电脑的IP地址或允许的网段。 allowed_ips = ["127.0.0.1";"192.168.1.2";"192.168.1.0-192.168.1.255";]
+    
 ---
 # 树莓派
 ## 概况
